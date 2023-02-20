@@ -2,7 +2,12 @@ import { useMemo } from "react";
 import { useTable } from "react-table";
 import "../styles/table.css";
 
-const BasicTable = ({ columnsTable, dataTable }) => {
+interface Props {
+  columnsTable: any;
+  dataTable: any;
+}
+
+const BasicTable = ({ columnsTable, dataTable }: Props) => {
   const columns = useMemo(() => columnsTable, []);
   const data = useMemo(() => dataTable, []);
 
